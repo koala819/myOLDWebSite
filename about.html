@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <script src="js/script.js"></script> -->
+  <style>
+    #poly span {visibility: hidden;}
+    #poly img:hover + span {visibility: visible; color:red;  font-weight: bold; position: relative;  top:-350px; left: 100px;}
+  </style>
 </head>
 
 <body class="text-gray-700 bg-white" style="font-family: 'Source Sans Pro', sans-serif">
@@ -16,12 +19,12 @@
   <!--Nav-->
   <nav>
     <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-      <a class="font-bold text-2xl lg:text-4xl hover:text-yellow-500" href="index.html">
+      <a class="font-bold text-2xl lg:text-4xl hover:text-yellow-500" href="index.html" role="link">
         GX
       </a>
       <div class="block lg:hidden">
         <button class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none 
-            focus:outline-none">
+          focus:outline-none" role="button">
           <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -29,12 +32,12 @@
         </button>
       </div>
       <div class="hidden lg:block">
-        <ul class="inline-flex">
-          <li><a class="px-4 hover:text-yellow-500" href="about.html">A propos de moi</a></li>
-          <li><a class="px-4 hover:text-yellow-500" href="prestation.html">Prestations</a></li>
-          <li><a class="px-4 hover:text-yellow-500" href="realisation.html">Réalisations</a></li>
-          <li><a class="px-4 hover:text-yellow-500" href="contact.html">Contact</a></li>
-      </ul>
+        <ul class="inline-flex" role="list">
+          <li role="listitem"><a class="px-4 hover:text-yellow-500" href="about.html" role=link>A propos de moi</a></li>
+          <li role="listitem"><a class="px-4 hover:text-yellow-500" href="prestation.html" role=link>Prestations</a></li>
+          <li role="listitem"><a class="px-4 hover:text-yellow-500" href="realisation.html" role=link>Réalisations</a></li>
+          <li role="listitem"><a class="px-4 hover:text-yellow-500" href="contact.html" role=link>Contact</a></li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -44,30 +47,31 @@
   <!--Hero-->
   <div id="am_div">
     <section class="container mx-auto px-6 p-10">
-      <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Vous avez besoin d'aide pour votre projet informatique ?
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-8" role="heading" aria-level="2">Vous avez besoin d'aide pour votre projet informatique ?
 
       </h2>
       <div class="flex items-center flex-wrap mb-20">
         <div class="w-full md:w-1/2">
-          <h4 class="text-3xl text-gray-800 font-bold mb-3">Polyvalent</h4>
+          <h4 class="text-3xl text-gray-800 font-bold mb-3" role="heading" aria-level="4">Polyvalent</h4>
           <p class="text-gray-600 mb-8 text-justify">Développeur, je sais aussi réparer un ordinateur, configurer un serveur et/ou un
             routeur car j'aime comprendre ce que j'utilise. De nature curieuse j'aime explorer l'univers informatique. La
             découverte et la maîtrise des nouvelles technologies m'ont toujours intéressées.
           </p>
         </div>
         <div class="w-full md:w-1/2" id="poly">
-          <a href="http://20100lefebvre.free.fr/" target="_blank">
-          <img src="assets/knife.png" alt="knife" />
+          <a href="http://20100lefebvre.free.fr/" target="_blank" role="link">
+          <img src="assets/knife.png" alt="knife" role="img">
+          <span>Cliquer pour découvrir le site de Vincent Lefebvre</span>
           </a>
         </div>
       </div>
 
       <div class="flex items-center flex-wrap mb-20">
         <div class="w-full md:w-1/2" id="ad">
-          <img src="assets/notebook-open.jpg" alt="notebook" />
+          <img src="assets/notebook-open.jpg" alt="notebook" role="img">
         </div>
         <div class="w-full md:w-1/2 pl-10">
-          <h4 class="text-3xl text-gray-800 font-bold mb-3">Autodidacte</h4>
+          <h4 class="text-3xl text-gray-800 font-bold mb-3" role="heading" aria-level="4">Autodidacte</h4>
           <p class="text-gray-600 mb-8 text-justify">Curieux, touche à tout, je suis déterminé pour finaliser tout projet professionel. 
             J'apprends de chaque expérience. Pour rester à jour des dernières nouveautés, je consacre mon temps libre à la veille technologique.</p>
         </div>
@@ -75,13 +79,13 @@
 
       <div class="flex items-center flex-wrap mb-20">
         <div class="w-full md:w-1/2">
-          <h4 class="text-3xl text-gray-800 font-bold mb-3">Partial Remote</h4>
+          <h4 class="text-3xl text-gray-800 font-bold mb-3" role="heading" aria-level="4">Partial Remote</h4>
           <p class="text-gray-600 mb-8 text-justify mr-5">Je sais travailler à distance ou en présentiel. Pour moi
             le plus important est la relation de confiance que nous bâtirons ensemble. Bon communiquant, tout sera mis en oeuvre pour faciliter nos échanges.
           </p>
         </div>
         <div class="w-full md:w-1/2" id="pr">
-          <img src="assets/finger-network.jpg" alt="network" />
+          <img src="assets/finger-network.jpg" alt="network" role="img">
         </div>
       </div>
     </section>
@@ -95,16 +99,16 @@
     <div class="w-1/3 flex-none p-2 ">
       <div class="flex w-full">
         <div class="m-auto">
-          <h5 class="uppercase mb-6 font-bold">Juridique</h5>
-          <ul class="">
-            <li class="mt-2">
-              <a href="mentions-legales.html" class="mt-4 hover:underline text-gray-500 hover:text-yellow-500">Mentions légales</a><br>
+          <h5 class="uppercase mb-6 font-bold" role="heading" aria-level="5">Juridique</h5>
+          <ul role="list">
+            <li class="mt-2" role="listitem">
+              <a href="mentions-legales.html" class="mt-4 hover:underline text-gray-500 hover:text-yellow-500" role=link>Mentions légales</a><br>
             </li>
-            <li class="mt-2">
-              <a href="donnees-personnelles.html" class="mt-4 hover:underline text-gray-500 hover:text-yellow-500">Protection des données</a>
+            <li class="mt-2" role="listitem">
+              <a href="donnees-personnelles.html" class="mt-4 hover:underline text-gray-500 hover:text-yellow-500" role=link>Protection des données</a>
             </li>
-            <li class="mt-2">
-              <a href="contact.html" class="mt-4 hover:underline text-gray-500 hover:text-yellow-500">Contact</a>
+            <li class="mt-2" role="listitem">
+              <a href="contact.html" class="mt-4 hover:underline text-gray-500 hover:text-yellow-500" role=link>Contact</a>
             </li>
           </ul>
         </div>
@@ -115,20 +119,20 @@
     <div class="w-1/3 flex-none p-2">
       <div class="flex w-full">
         <div class="m-auto">
-          <h5 class="uppercase mb-6 font-bold">Social</h5>
-          <ul>
-            <li class="mt-2">
-              <a href="https://www.linkedin.com/in/xavier-genolhac-79a98390/" target="_blank">
+          <h5 class="uppercase mb-6 font-bold" role="heading" aria-level="5">Social</h5>
+          <ul role="list">
+            <li class="mt-2" role="listitem">
+              <a href="https://www.linkedin.com/in/xavier-genolhac-79a98390/" target="_blank" role=link>
                 <svg class="fill-current text-blue-400 inline-block h-6 w-6 hover:text-yellow-500"
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510">
                   <path d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z
-			            M153,433.5H76.5V204H153V433.5z M114.75,160.65c-25.5,0-45.9-20.4-45.9-45.9s20.4-45.9,45.9-45.9s45.9,20.4,45.9,45.9
+                  M153,433.5H76.5V204H153V433.5z M114.75,160.65c-25.5,0-45.9-20.4-45.9-45.9s20.4-45.9,45.9-45.9s45.9,20.4,45.9,45.9
                   S140.25,160.65,114.75,160.65z M433.5,433.5H357V298.35c0-20.399-17.85-38.25-38.25-38.25s-38.25,17.851-38.25,38.25V433.5H204
                   V204h76.5v30.6c12.75-20.4,40.8-35.7,63.75-35.7c48.45,0,89.25,40.8,89.25,89.25V433.5z" />
                 </svg></a>
             </li>
-            <li class="mt-2">
-              <a href="https://github.com/koala819/" target="_blank">
+            <li class="mt-2" role="listitem">
+              <a href="https://github.com/koala819/" target="_blank" role=link>
                 <svg class="fill-current text-blue-400 inline-block h-6 w-6 hover:text-yellow-500"
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.536 438.536">
                   <path d="M414.41,24.123C398.326,8.042,378.964,0,356.309,0H82.225C59.577,0,40.208,8.042,24.123,24.123
@@ -154,8 +158,8 @@
                 </svg>
               </a>
             </li>
-            <!--<li>
-              <a href="https://www.malt.fr/">
+            <!--<li role="listitem" aria-hidden="true">
+              <a href="https://www.malt.fr/"  role=link>
                 <svg class="fill-current text-blue-400 inline-block h-16 w-16 hover:text-yellow-500 -mt-3"
                   viewBox="0 0 745 213" xmlns="http://www.w3.org/2000/svg">
                   <path

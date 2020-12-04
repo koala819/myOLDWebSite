@@ -1,3 +1,11 @@
 PSD/
 .vscode/
+hooks/
+info/
+objects/
+refs/
 Tailwind_workspace.code-workspace
+config
+description
+HEAD
+hero.png
