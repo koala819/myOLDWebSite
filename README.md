@@ -9,5 +9,5 @@
 [![forthebadge](https://forthebadge.com/images/badges/cc-0.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
 
-## My portfolio made with the Tailwind framework
-To discover and browse [here](http://dix31.org/)
+## My first work made with the Tailwind framework
+
